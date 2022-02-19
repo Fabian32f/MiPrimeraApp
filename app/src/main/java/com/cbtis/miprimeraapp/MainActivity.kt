@@ -13,13 +13,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val bSaludar = findViewById<Button>(R.id.bSaludar)
+        val etNombre = findViewById<EditText>(R.id.etNombre)
+
         bSaludar.setOnClickListener (View.OnClickListener {
 
-            if (){
-
+            if (validaDato()){
+                Toast.makeText( this,  "Bienvenido "+ etNombre.text, Toast.LENGTH_LONG).show()
             }
 
-            Toast.makeText( this,  "Hola!", Toast.LENGTH_LONG).show()
+
         })
 
     }
